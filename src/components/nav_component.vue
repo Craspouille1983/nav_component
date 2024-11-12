@@ -2,7 +2,7 @@
     <nav>
         <figure><img :src="require(`@/assets/${src}`)" :alt="altText"></figure>
         <ul>
-            <li v-for="item in items" :key="`item-${id}`"><a :href="item.menuUrl">{{ item.menu }}</a></li>
+            <li v-for="item in items" :key="`item-${item.id}`"><a :href="item.menuUrl">{{ item.menu }}</a></li>
         </ul>
         <div class="burger"><span></span><span></span><span></span></div>
     </nav>
