@@ -8,8 +8,14 @@
     </nav>
 </template>
 <script>
+
 export default {
     name: "navComponent",
+    data() {
+        return {
+            burger: false,
+        }
+    },
     props: {
         src: {
             type: String,
@@ -20,10 +26,11 @@ export default {
             default: "Logo Craspouille"
         },
         items: {
-            type: String,
-            default: 'items'
+            type: Array,
+            default: () => [],
         }
-    }
+    },
+
 }
 </script>
 <style scoped>
@@ -34,7 +41,7 @@ nav {
         flex-direction: column;
         align-items: flex-end;
         row-gap: .5em;
-
+        
         span {
             display: inline-block;
             height: .6ex;
